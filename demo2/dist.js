@@ -953,7 +953,7 @@
                             return err ? cb(err) : void cb(null, commit)
                         })
                     }, this.getSha = function(branch, path, cb) {
-                        return path && "" !== path ? void _request("GET", repoPath + "/contents/" + path, {
+                        return path && "" !== path ? void _request("GET", repoPath + "/contents/datafile/" + path, {
                             ref: branch
                         }, function(err, pathContent) {
                             return err ? cb(err) : void cb(null, pathContent.sha)
@@ -1050,14 +1050,14 @@
                     }, this.deleteHook = function(id, cb) {
                         _request("DELETE", repoPath + "/hooks/" + id, null, cb)
                     }, this.read = function(branch, path, cb) {
-                        _request("GET", repoPath + "/contents/" + path, {
+                        _request("GET", repoPath + "/contents/datafile/" + path, {
                             ref: branch
                         }, function(err, obj) {
                             return err && 404 === err.error ? cb("not found", null, null) : err ? cb(err) : void cb(null, obj)
                         }, !0)
                     }, this.remove = function(branch, path, cb) {
                         that.getSha(branch, path, function(err, sha) {
-                            return err ? cb(err) : void _request("DELETE", repoPath + "/contents/" + path, {
+                            return err ? cb(err) : void _request("DELETE", repoPath + "/contents/datafile/" + path, {
                                 message: path + " is removed",
                                 sha: sha,
                                 branch: branch
@@ -1066,7 +1066,7 @@
                     }, this.delete = function(branch, path, cb) {
                         that.getSha(branch, path, function(err, sha) {
                             if (!sha) return cb("not found", null);
-                            var delPath = repoPath + "/contents/" + path,
+                            var delPath = repoPath + "/contents/datafile/" + path,
                                 params = {
                                     message: "Deleted " + path,
                                     sha: sha
@@ -1089,7 +1089,7 @@
                         })
                     }, this.write = function(branch, path, content, message, cb) {
                         that.getSha(branch, path, function(err, sha) {
-                            return err && 404 !== err.error ? cb(err) : void _request("PUT", repoPath + "/contents/" + path, {
+                            return err && 404 !== err.error ? cb(err) : void _request("PUT", repoPath + "/contents/datafile/" + path, {
                                 message: message,
                                 content: btoa(content),
                                 branch: branch,
