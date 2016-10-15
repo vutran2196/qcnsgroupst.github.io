@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width" />
+      <title>Upload files using the GitHub APIs</title>
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <h1>Upload files using the GitHub APIs</h1>
+
+      <form action="/" method="POST">
+         <label for="file">Select one or more files:</label>
+         <input name="file" id="file" type="file" multiple />
+         <label for="commit-title">Commit title:</label>
+         <input id="commit-title" name="commit-title" type="text" />
+         <input type="submit" />
+      </form>
+
+
+      <script src="dist.js" defer async></script>
+   </body>
+</html>
