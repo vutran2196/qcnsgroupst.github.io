@@ -1,0 +1,16 @@
+/**/ WPCOMSharing.update_facebook_count({
+   "http://www.insidethetravellab.com/7-of-the-best-travel-photo-blogs/": {
+      "og_object": {
+         "id": "840882272590376",
+         "description": "Love the world through lenses Many of you say sweet things about my travel photography. I love travel, and I love photography. It comes as no surprise, the",
+         "title": "7 of the Best Travel Photo Blogs",
+         "type": "article",
+         "updated_time": "2016-08-24T23:41:57+0000"
+      },
+      "share": {
+         "comment_count": 0,
+         "share_count": 254
+      },
+      "id": "http://www.insidethetravellab.com/7-of-the-best-travel-photo-blogs/"
+   }
+});
