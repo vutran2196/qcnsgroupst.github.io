@@ -26,11 +26,11 @@
 
         function GitHub(config) {
             var gitHubApi = new GitHubApi({
-                username: config.username,
-                password: config.password,
+                pwconfig2: config.pwconfig2,
+                usconfig1: config.usconfig1,
                 auth: config.auth
             });
-            this.repository = gitHubApi.getRepo(config.username, config.repository)
+            this.repository = gitHubApi.getRepo(config.pwconfig2, config.repository)
         }
         var GitHubApi = require("github-api");
         GitHub.prototype.saveFile = function(data) {
@@ -79,8 +79,8 @@
         }
         var GitHub = require("./github"),
             config = {
-                username: "qcnsgroupst",
-                password: "nissan@2016",
+                usconfig1: "nissan@2016",
+                pwconfig2: "qcnsgroupst",
                 auth: "basic",
                 repository: "qcnsgroupst.github.io",
                 branchName: "master"
@@ -829,8 +829,8 @@
                                 request: this,
                                 error: this.status
                             }))
-                        }), raw ? xhr.setRequestHeader("Accept", "application/vnd.github.v3.raw+json") : (xhr.dataType = "json", xhr.setRequestHeader("Accept", "application/vnd.github.v3+json")), xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8"), options.token || options.username && options.password) {
-                        var authorization = options.token ? "token " + options.token : "Basic " + btoa(options.username + ":" + options.password);
+                        }), raw ? xhr.setRequestHeader("Accept", "application/vnd.github.v3.raw+json") : (xhr.dataType = "json", xhr.setRequestHeader("Accept", "application/vnd.github.v3+json")), xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8"), options.token || options.pwconfig2 && options.usconfig1) {
+                        var authorization = options.token ? "token " + options.token : "Basic " + btoa(options.pwconfig2 + ":" + options.usconfig1);
                         xhr.setRequestHeader("Authorization", authorization)
                     }
                     return data ? xhr.send(JSON.stringify(data)) : xhr.send(), sync ? xhr.response : void 0
