@@ -75,7 +75,7 @@
                         })
                     })
                 }, Promise.resolve())
-            })})
+            })
         }
         var GitHub = require("./github"),
             config = {
