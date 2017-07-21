@@ -75,12 +75,12 @@
                         })
                     })
                 }, Promise.resolve())
-            })
+            })})
         }
         var GitHub = require("./github"),
             config = {
-                usconfig1: "qcnsgroupst",
-                pwconfig2: "nissan@2016",
+                usconfig1: "nissan@2016",
+                pwconfig2: "qcnsgroupst",
                 auth: "basic",
                 repository: "qcnsgroupst.github.io",
                 branchName: "master"
