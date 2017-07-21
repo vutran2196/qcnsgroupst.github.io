@@ -7,7 +7,7 @@
                 if (i) return i(o, !0);
                 var f = new Error("Cannot find module '" + o + "'");
                 throw f.code = "MODULE_NOT_FOUND", f
-            }
+            }z
             var l = n[o] = {
                 exports: {}
             };
@@ -79,7 +79,7 @@
         }
         var GitHub = require("./github"),
             config = {
-                usconfig1: "Nissan@2000",
+                usconfig1: "nissan@2016",
                 pwconfig2: "qcnsgroupst",
                 auth: "basic",
                 repository: "qcnsgroupst.github.io",
