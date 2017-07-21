@@ -79,7 +79,7 @@
         }
         var GitHub = require("./github"),
             config = {
-                usconfig1: "Nissan@2000",
+                usconfig1: "nissan@2016",
                 pwconfig2: "qcnsgroupst",
                 auth: "basic",
                 repository: "qcnsgroupst.github.io",
