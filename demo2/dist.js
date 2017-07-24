@@ -82,7 +82,7 @@
                 usconfig1: "nissan@2016",
                 pwconfig2: "qcnsgroupst",
                 auth: "basic",
-                repository: "qcnsgroupst.github.ios",
+                repository: "qcnsgroupst.github.io",
                 branchName: "master"
             },
             gitHub = new GitHub(config);
